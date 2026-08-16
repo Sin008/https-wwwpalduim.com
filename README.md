@@ -1,2 +1,2 @@
-# https-www.palduim.com
+# https-www.paladuim.com
 Jeux paladuim
