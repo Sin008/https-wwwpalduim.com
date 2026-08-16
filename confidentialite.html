@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidentialité Paladuim</title>
+<style>
+  /* Palette tiree de l'interface du jeu : le bleu d'accent du lobby
+     (kAccent) et ses gris legerement bleutes, plutot qu'un gris pur. */
+  :root {
+    --ground:   #F5F8FB;
+    --surface:  #FFFFFF;
+    --ink:      #0F1720;
+    --muted:    #56636F;
+    --accent:   #1A6C9F;
+    --rule:     #DBE3EB;
+    --stripe:   #EBF1F7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:  #090D13;
+      --surface: #10161F;
+      --ink:     #DCE4EC;
+      --muted:   #8794A2;
+      --accent:  #6FBDEF;
+      --rule:    #1F2732;
+      --stripe:  #0D141C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:  #090D13;
+    --surface: #10161F;
+    --ink:     #DCE4EC;
+    --muted:   #8794A2;
+    --accent:  #6FBDEF;
+    --rule:    #1F2732;
+    --stripe:  #0D141C;
+  }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 16px/1.72 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .page {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    margin: .4rem 0 0;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+  .date {
+    margin: .9rem 0 0;
+    color: var(--muted);
+    font-size: .875rem;
+  }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; }
+
+  section { display: flex; flex-direction: column; gap: .75rem; }
+  h2 {
+    margin: 0;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -.005em;
+  }
+  p { margin: 0; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .tableau { overflow-x: auto; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 26rem;
+    font-size: .9375rem;
+    background: var(--surface);
+  }
+  caption {
+    caption-side: bottom;
+    padding-top: .75rem;
+    color: var(--muted);
+    font-size: .8125rem;
+    text-align: left;
+  }
+  th, td { text-align: left; padding: .7rem .85rem; vertical-align: top; border-bottom: 1px solid var(--rule); }
+  thead th {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  tbody tr:nth-child(odd) td { background: var(--stripe); }
+  tbody tr:last-child td { border-bottom: 0; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.75rem;
+    color: var(--muted);
+    font-size: .9375rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <p class="eyebrow">Paladuim</p>
+    <h1>Politique de confidentialité</h1>
+    <p class="date">Dernière mise à jour : 16 août 2026</p>
+  </header>
+
+  <section>
+    <p>Ce document explique quelles données Paladuim traite, pourquoi, et ce que vous
+    pouvez exiger à leur sujet. Il s'applique au jeu Paladuim et à lui seul.</p>
+  </section>
+
+  <section>
+    <h2>Qui traite vos données</h2>
+    <p>Paladuim est développé par un développeur indépendant, joignable à
+    <a href="mailto:puylaurent974@gmail.com">puylaurent974@gmail.com</a>. C'est le responsable
+    de traitement au sens du RGPD.</p>
+  </section>
+
+  <section>
+    <h2>Ce qui est traité, et pourquoi</h2>
+    <p>Paladuim n'héberge aucun serveur de comptes. L'identification et le jeu en ligne
+    reposent sur <strong>Epic Online Services</strong>, fourni par Epic Games. Les données
+    ci-dessous transitent par cette infrastructure.</p>
+    <div class="tableau">
+      <table>
+        <thead>
+          <tr><th scope="col">Donnée</th><th scope="col">Pourquoi</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Identifiant de compte Epic et nom d'affichage</td>
+            <td>Vous identifier d'une partie à l'autre et vous nommer à l'écran auprès des autres joueurs.</td>
+          </tr>
+          <tr>
+            <td>Liste d'amis Epic et état de présence</td>
+            <td>Afficher qui est disponible et permettre les invitations. Lue uniquement, jamais modifiée.</td>
+          </tr>
+          <tr>
+            <td>Session de jeu et adresse réseau</td>
+            <td>Mettre les joueurs en relation pendant une partie. L'adresse sert à la connexion et n'est pas conservée après.</td>
+          </tr>
+          <tr>
+            <td>Progression : niveau, monnaie, cosmétiques possédés</td>
+            <td>Retrouver votre profil au lancement suivant.</td>
+          </tr>
+          <tr>
+            <td>Réglages : langue, volumes, touches</td>
+            <td>Conservés <strong>sur votre machine uniquement</strong>, jamais transmis.</td>
+          </tr>
+        </tbody>
+      </table>
+      <caption>Aucune donnée n'est vendue, louée, ni transmise à des fins publicitaires.
+      Paladuim n'intègre aucune régie publicitaire ni traceur d'analyse tiers.</caption>
+    </div>
+  </section>
+
+  <section>
+    <h2>Base légale</h2>
+    <p>Le traitement repose sur l'exécution du service que vous demandez : sans identifiant
+    ni mise en relation, une partie en ligne est impossible. Les réglages locaux relèvent de
+    votre seul usage et ne quittent pas votre appareil.</p>
+  </section>
+
+  <section>
+    <h2>Combien de temps</h2>
+    <p>Votre profil de jeu est conservé tant que votre compte reste actif. Il est effacé sur
+    demande, ou lorsque vous cessez d'utiliser le jeu de façon prolongée. Les données de
+    session — qui joue avec qui, à quelle adresse — disparaissent à la fin de la partie.</p>
+  </section>
+
+  <section>
+    <h2>Epic Games</h2>
+    <p>Epic Games agit comme fournisseur de l'infrastructure et applique sa propre politique,
+    que vous acceptez en vous connectant avec un compte Epic :
+    <a href="https://www.epicgames.com/site/privacypolicy" rel="noopener">epicgames.com/site/privacypolicy</a>.
+    Les données peuvent être traitées hors de l'Union européenne selon les modalités prévues
+    par Epic Games.</p>
+  </section>
+
+  <section>
+    <h2>Vos droits</h2>
+    <p>Vous pouvez demander l'accès à vos données, leur correction, leur effacement, ou vous
+    opposer à leur traitement. Écrivez à
+    <a href="mailto:puylaurent974@gmail.com">puylaurent974@gmail.com</a> ; la réponse intervient sous
+    trente jours. Les données détenues par Epic Games se réclament directement auprès d'Epic
+    Games, via votre compte Epic.</p>
+  </section>
+
+  <section>
+    <h2>Enfants</h2>
+    <p>Paladuim ne s'adresse pas aux enfants de moins de treize ans et ne collecte pas
+    sciemment leurs données. L'âge minimum d'un compte Epic est fixé par Epic Games.</p>
+  </section>
+
+  <section>
+    <h2>Modifications</h2>
+    <p>Ce document peut évoluer. La date en tête indique la dernière version ; un changement
+    substantiel sera signalé dans le jeu.</p>
+  </section>
+
+  <footer>
+    Contact : <a href="mailto:puylaurent974@gmail.com">puylaurent974@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>

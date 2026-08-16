@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Licence Paladuim</title>
+<style>
+  :root {
+    --ground:   #F5F8FB;
+    --surface:  #FFFFFF;
+    --ink:      #0F1720;
+    --muted:    #56636F;
+    --accent:   #1A6C9F;
+    --rule:     #DBE3EB;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:  #090D13;
+      --surface: #10161F;
+      --ink:     #DCE4EC;
+      --muted:   #8794A2;
+      --accent:  #6FBDEF;
+      --rule:    #1F2732;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:  #090D13;
+    --surface: #10161F;
+    --ink:     #DCE4EC;
+    --muted:   #8794A2;
+    --accent:  #6FBDEF;
+    --rule:    #1F2732;
+  }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 16px/1.72 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .page {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    margin: .4rem 0 0;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+  .date { margin: .9rem 0 0; color: var(--muted); font-size: .875rem; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; }
+
+  /* Les articles sont une SEQUENCE reelle -- on s'y refere par leur numero
+     dans l'article 8 -- donc la numerotation porte une information. */
+  ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2rem; counter-reset: article; }
+  li { counter-increment: article; display: flex; flex-direction: column; gap: .7rem; }
+  li h2 {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: .7rem;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  li h2::before {
+    content: counter(article);
+    flex: none;
+    min-width: 1.6rem;
+    padding-bottom: .1rem;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-family: system-ui, sans-serif;
+    font-size: .8125rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .06em;
+  }
+  p { margin: 0; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.75rem;
+    color: var(--muted);
+    font-size: .9375rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <p class="eyebrow">Paladuim</p>
+    <h1>Contrat de licence utilisateur final</h1>
+    <p class="date">Dernière mise à jour : 16 août 2026</p>
+  </header>
+
+  <p>En installant ou en utilisant Paladuim, vous acceptez ce contrat. Si vous le refusez,
+  n'utilisez pas le jeu.</p>
+
+  <ol>
+    <li>
+      <h2>Licence accordée</h2>
+      <p>Il vous est concédé un droit personnel, non exclusif et non transférable d'installer
+      et d'utiliser Paladuim à des fins privées et non commerciales. Le jeu vous est concédé,
+      pas vendu : sa propriété reste celle de son auteur.</p>
+    </li>
+    <li>
+      <h2>Ce que vous ne pouvez pas faire</h2>
+      <p>Vous ne pouvez ni revendre, louer ou redistribuer le jeu, ni le décompiler ou en
+      extraire les ressources en dehors des cas prévus par la loi, ni le modifier pour obtenir
+      un avantage en partie, ni utiliser de programme tiers altérant son fonctionnement au
+      détriment des autres joueurs.</p>
+    </li>
+    <li>
+      <h2>Compte et conduite en ligne</h2>
+      <p>Le jeu en ligne exige un compte Epic, régi par les conditions d'Epic Games. Vous
+      répondez de l'activité menée depuis votre compte. Le harcèlement, la triche et
+      l'exploitation de failles peuvent entraîner la suspension de l'accès aux services en
+      ligne, sans que cela ouvre droit à indemnité.</p>
+    </li>
+    <li>
+      <h2>Contenus du jeu</h2>
+      <p>Les personnages, cosmétiques, monnaies et progressions sont des éléments internes au
+      jeu, sans valeur monétaire et non convertibles. Ils peuvent être modifiés, rééquilibrés
+      ou retirés au fil des mises à jour.</p>
+    </li>
+    <li>
+      <h2>Mises à jour</h2>
+      <p>Des mises à jour peuvent être publiées pour corriger, équilibrer ou étendre le jeu.
+      Certaines sont nécessaires pour continuer à jouer en ligne.</p>
+    </li>
+    <li>
+      <h2>Garantie</h2>
+      <p>Le jeu est fourni « en l'état », sans garantie de fonctionnement ininterrompu ni
+      d'absence de défaut. Dans les limites permises par la loi, la responsabilité de l'auteur
+      ne saurait être engagée pour un dommage indirect résultant de l'utilisation du jeu.
+      Cette clause ne restreint pas les droits que la loi vous accorde en tant que
+      consommateur.</p>
+    </li>
+    <li>
+      <h2>Services tiers</h2>
+      <p>Paladuim s'appuie sur Epic Online Services. Une interruption de ces services peut
+      rendre le jeu en ligne temporairement indisponible, sans que cela constitue un
+      manquement au présent contrat.</p>
+    </li>
+    <li>
+      <h2>Résiliation</h2>
+      <p>Ce contrat prend fin si vous cessez d'utiliser le jeu et le désinstallez, ou en cas
+      de manquement grave de votre part aux articles 2 et 3.</p>
+    </li>
+    <li>
+      <h2>Droit applicable</h2>
+      <p>Ce contrat est soumis au droit français. Les dispositions impératives protégeant les
+      consommateurs de leur pays de résidence restent applicables.</p>
+    </li>
+  </ol>
+
+  <footer>
+    Contact : <a href="mailto:puylaurent974@gmail.com">puylaurent974@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
